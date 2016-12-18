@@ -1,0 +1,7 @@
+[submodule "tapir"]
+	path = tapir
+	url = https://github.com/wsmoses/Parallel-IR
+
+[submodule "tapir/tools/clang"]
+	path = tapir/tools/clang
+	url = https://github.com/wsmoses/Cilk-Clang
