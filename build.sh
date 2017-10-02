@@ -61,3 +61,10 @@ echo "$0: cmake --build . -- -j$HThreadCount"
 cmake --build . -- -j$HThreadCount
 
 echo "Installation successful"
+cd ../..
+
+if [[ $* == *--deb* ]]
+then
+    echo "Building Debian file"
+    ./deb.sh
+fi
