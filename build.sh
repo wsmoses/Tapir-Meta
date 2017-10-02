@@ -33,9 +33,11 @@ else
     esac
 fi
 
-# Update the Tapir/LLVM and PClang repositories
-echo "$0: git submodule update --init --recursive"
-git submodule update --init --recursive
+if [ -z $TAPIR_NOUPDATE ]; then
+    # Update the Tapir/LLVM and PClang repositories
+    echo "$0: git submodule update --init --recursive"
+    git submodule update --init --recursive
+fi
 
 # Create the build directory if necessary
 if [ ! -d $LLVM_BUILD ]; then
