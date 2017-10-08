@@ -1,7 +1,7 @@
 #!/bin/bash
 export NAME=tapir
 export VERSION=1.0
-export DEBVERSION=${VERSION}-1
+export DEBVERSION=${VERSION}-2
 export DIRNAME=tapir-${VERSION}-x86_64-linux-gnu-ubuntu-16.04
 export FILENAME=${DIRNAME}.tar.xz
 rm -rf $DIRNAME
@@ -25,8 +25,9 @@ echo "" >> debian/control
 #Library package
 echo "Package: $NAME" >> debian/control
 echo "Architecture: amd64" >> debian/control
-echo "Provides: llvm, clang, libllvm-tp, clang, clang-tp" >> debian/control
+echo "Provides: llvm, clang, libllvm-tp, clang, clang-tp, clang-format, clang-format-tp" >> debian/control
 echo "Depends: ${shlibs:Depends}, ${misc:Depends}, libcilkrts5, libc6, libc6-dev, binutils, libgcc1, libgcc-5-dev" >> debian/control
+echo "Conflict: llvm, clang, clang-format" >> debian/control
 echo "Description: Tapir LLVM + Clang distribution" >> debian/control
 echo "" >> debian/control
 #Dev package
