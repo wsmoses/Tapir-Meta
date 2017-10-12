@@ -26,8 +26,9 @@ echo "" >> debian/control
 echo "Package: $NAME" >> debian/control
 echo "Architecture: amd64" >> debian/control
 echo "Provides: llvm, clang, libllvm-tp, clang, clang-tp, clang-format, clang-format-tp" >> debian/control
-echo "Depends: ${shlibs:Depends}, ${misc:Depends}, libcilkrts5, libc6, libc6-dev, binutils, libgcc1, libgcc-5-dev" >> debian/control
-echo "Conflict: llvm, clang, clang-format" >> debian/control
+echo "Depends: ${shlibs:Depends}, ${misc:Depends}, libcilkrts5, libc6, libc6-dev, binutils, libgcc1, libgcc-5-dev, libomp5" >> debian/control
+echo "Conflicts: llvm, clang, clang-format" >> debian/control
+echo "Replaces: llvm, clang, clang-format" >> debian/control
 echo "Description: Tapir LLVM + Clang distribution" >> debian/control
 echo "" >> debian/control
 #Dev package
