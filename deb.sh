@@ -1,7 +1,7 @@
 #!/bin/bash
 export NAME=tapir
 export VERSION=1.0
-export DEBVERSION=${VERSION}-2
+export DEBVERSION=${VERSION}-0
 export DIRNAME=tapir-${VERSION}-x86_64-linux-gnu-ubuntu-16.04
 export FILENAME=${DIRNAME}.tar.xz
 rm -rf $DIRNAME
