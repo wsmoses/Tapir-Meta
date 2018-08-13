@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-LLVM_BUILD=$PWD/tapir/build
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+LLVM_BUILD=$DIR/tapir/build
 export PATH=$LLVM_BUILD/bin:$PATH
