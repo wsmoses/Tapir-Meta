@@ -1,7 +1,23 @@
 [submodule "tapir"]
 	path = tapir
-	url = https://github.com/wsmoses/Parallel-IR
+	url = https://github.com/wsmoses/Tapir-LLVM
+	branch = release_60-release
 
 [submodule "tapir/tools/clang"]
 	path = tapir/tools/clang
-	url = https://github.com/wsmoses/Cilk-Clang
+	url = https://github.com/wsmoses/Tapir-Clang
+	branch = release_60-release
+
+[submodule "tapir/tools/polly"]
+	path = tapir/tools/polly
+	url = https://github.com/wsmoses/Tapir-Polly
+	branch = release_60
+
+[submodule "tapir/projects/compiler-rt"]
+	path = tapir/projects/compiler-rt
+	url = https://github.com/wsmoses/Tapir-compiler-rt
+	branch = release_60-release
+
+[submodule "cilkrts"]
+	path = cilkrts
+	url = https://github.com/CilkHub/cilkrts.git
