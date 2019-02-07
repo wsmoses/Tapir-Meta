@@ -1,7 +1,7 @@
 [submodule "tapir"]
 	path = tapir
-	url = https://github.com/wsmoses/Tapir-LLVM
-	branch = release_60-release
+	url = git@csil-git1.cs.surrey.sfu.ca:Dandelion/Tapir-Meta.git
+	branch = dandelion
 
 [submodule "tapir/tools/clang"]
 	path = tapir/tools/clang
