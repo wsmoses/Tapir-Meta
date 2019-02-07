@@ -22,3 +22,10 @@ Or, you can get something in between (optimized, but with debug information):
     ./build.sh debinfo
 
 Building Tapir/LLVM and PClang can take a long time to complete, depending on the computational resources  of machine you are building on.
+
+## Extracting bitcode
+For extracting bitcode set the follwoing environemnt variable:
+
+```shell
+export DANDELION_EXTRACT=ON
+```
