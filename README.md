@@ -30,7 +30,7 @@ Cilk extends C and C++ with three keywords: `cilk_spawn`, `cilk_sync`, and `cilk
 ### Spawn and sync
 Let us first examine the task-parallel keywords `cilk_spawn` and `cilk_sync`. Consider the following example code for a fib routine, which uses these keywords to parallelize the computation of the nth Fibonacci number.
 
-```C++
+```c++
 int64_t fib(int64_t n) {
   if (n < 2) return n;
   int x, y;
@@ -50,7 +50,7 @@ Together, a programmer can use the cilk_spawn and cilk_sync keywords to expose l
 ### Parallel loops
 A for loop can be parallelized by replacing the for with the cilk_for keyword, as demonstrated by the following code to compute y=ax+y from two given vectors x and y and a given scalar value a:
 
-```C++
+```c++
 void daxpy(int n, double a, double *x, double *y) {
   cilk_for (int i = 0; i < n; ++i) {
     y[i] = a * x[i] + y[i];
@@ -83,13 +83,17 @@ Compiling a Cilk program is similar to compiling an ordinary C or C++ program. T
 
 You can find cilkrts.so file under cilkrts/build or the path should in your environment.
 
+for instance for compiling fib, compile command should look like the following:
+
+    clang++ -fcilkplus -L<tapir-path>/cilkrts/build fib.cpp -o fib
+
 ## Bitcode extraction
 
 Modified version of Tapir allows user to store LLVM bitcode before lowering phase to Cilk.
 To extract bitcode, you need to set the follwoing environemnt variable:
 
 ```shell
-    export DANDELION_EXTRACT=ON
+export DANDELION_EXTRACT=ON
 ```
 
 And then compile the program with clang. In the same folder, a new bc file would be generated with prefix of: `.dandelion.bc`. This bc file contains detach, attach and sync instructions from Tapir.
