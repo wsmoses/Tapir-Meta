@@ -6,7 +6,7 @@ This is the top-level meta-repository for downloading and building the Tapir/LLV
 
 To build Tapir/LLVM and PClang (debug-mode), execute the following commands:
 
-    git clone --recursive https://github.com/wsmoses/Tapir-Meta.git
+    git clone --recursive git@csil-git1.cs.surrey.sfu.ca:Dandelion/Tapir-Meta.git
     cd Tapir-Meta/
     ./build.sh
     source ./setup-env.sh
