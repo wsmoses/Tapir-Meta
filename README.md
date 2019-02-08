@@ -23,6 +23,10 @@ Or, you can get something in between (optimized, but with debug information):
 
 Building Tapir/LLVM and PClang can take a long time to complete, depending on the computational resources  of machine you are building on.
 
+Make sure you have installed the following packages up front:
+
+    sudo apt install binutils-dev build-essential
+
 ## Programming Cilk program
 The Cilk programming language provides a simple extension to the C and C++ languages that allow programmers to expose logically parallel tasks.
 Cilk extends C and C++ with three keywords: `cilk_spawn`, `cilk_sync`, and `cilk_for`. This page describes the Cilk language extension.
