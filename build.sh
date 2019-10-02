@@ -89,10 +89,10 @@ popd
 #cmake --build . --target install
 #popd
 
-#echo "Installation successful"
+echo "Installation successful"
 
-#if [[ $* == *--deb* ]]
-#then
-    #echo "Building Debian file"
-    #./deb.sh
-#fi
+if [[ $* == *--deb* ]]
+then
+    echo "Building Debian file"
+    ./deb.sh
+fi

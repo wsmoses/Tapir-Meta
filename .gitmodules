@@ -17,7 +17,3 @@
 	path = tapir/projects/compiler-rt
 	url = https://github.com/wsmoses/Tapir-compiler-rt
 	branch = release_60-release
-
-[submodule "cilkrts"]
-	path = cilkrts
-	url = https://github.com/CilkHub/cilkrts.git
