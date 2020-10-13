@@ -1,7 +1,7 @@
 [submodule "tapir"]
 	path = tapir
-	url = git@csil-git1.cs.surrey.sfu.ca:Dandelion/Tapir-Meta.git
-	branch = dandelion
+	url = https://github.com/sfu-arch/tapir
+	branch = tapir_60
 
 [submodule "tapir/tools/clang"]
 	path = tapir/tools/clang
