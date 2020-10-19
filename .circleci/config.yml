@@ -1,0 +1,8 @@
+ version: 2
+ jobs:
+   build:
+     docker:
+       - image: amsharifian/muir-docker:1.0
+     steps:
+       - checkout
+       - run: ./build.sh
