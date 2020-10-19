@@ -12,3 +12,6 @@
 	path = tapir/projects/compiler-rt
 	url = https://github.com/wsmoses/Tapir-compiler-rt
 	branch = release_60-release
+[submodule "tapir"]
+	path = tapir
+	url = https://github.com/sfu-arch/tapir
